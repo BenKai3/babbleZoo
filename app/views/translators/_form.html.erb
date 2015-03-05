@@ -1,0 +1,89 @@
+<%= form_for(@translator) do |f| %>
+  <% if @translator.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@translator.errors.count, "error") %> prohibited this translator from being saved:</h2>
+
+      <ul>
+      <% @translator.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :screen_name %><br>
+    <%= f.text_field :screen_name %>
+  </div>
+  <div class="field">
+    <%= f.label :profession %><br>
+    <%= f.text_field :profession %>
+  </div>
+  <div class="field">
+    <%= f.label :other_qualifications %><br>
+    <%= f.text_field :other_qualifications %>
+  </div>
+  <div class="field">
+    <%= f.label :rate_per_minute %><br>
+    <%= f.text_field :rate_per_minute %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :salt %><br>
+    <%= f.text_field :salt %>
+  </div>
+  <div class="field">
+    <%= f.label :encrypted_password %><br>
+    <%= f.text_field :encrypted_password %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br>
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :cc# %><br>
+    <%= f.number_field :cc# %>
+  </div>
+  <div class="field">
+    <%= f.label :cc_expiration %><br>
+    <%= f.text_field :cc_expiration %>
+  </div>
+  <div class="field">
+    <%= f.label :cvv2 %><br>
+    <%= f.number_field :cvv2 %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :overall_rating %><br>
+    <%= f.text_field :overall_rating %>
+  </div>
+  <div class="field">
+    <%= f.label :total_transactions %><br>
+    <%= f.number_field :total_transactions %>
+  </div>
+  <div class="field">
+    <%= f.label :created_at %><br>
+    <%= f.date_select :created_at %>
+  </div>
+  <div class="field">
+    <%= f.label :updated_at %><br>
+    <%= f.date_select :updated_at %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
